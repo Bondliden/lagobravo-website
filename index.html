@@ -10,6 +10,7 @@
 <meta name="theme-color" content="#0E2233">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:title" content="Lago Bravo · Quebrada Escondida">
 <meta property="og:description" content="Un valle abierto al Pacífico en La Libertad, El Salvador: dos torres bajo palapa, 58 villas, restaurante en una isla y beach club.">
@@ -61,11 +62,11 @@ section{position:relative}
 
 /* nav */
 .nav{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .35s var(--ease),box-shadow .35s var(--ease)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;max-width:1440px}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:104px;max-width:1440px}
 .nav.solid{background:rgba(14,34,51,.96);box-shadow:0 1px 0 var(--rule-d)}
 .brand{font-family:var(--serif);color:#FAF7F1;text-decoration:none;font-size:21px;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;display:inline-flex;align-items:center;gap:12px}
-.brand-logo{width:38px;height:38px;border-radius:50%;flex:0 0 auto;box-shadow:0 0 0 1px rgba(184,149,90,.55)}
-footer.foot .brand-logo{width:30px;height:30px}
+.brand-logo{height:88px;width:auto;display:block;flex:0 0 auto}          /* logo oficial entero (05-10-2026) */
+footer.foot .brand-logo{height:60px}
 .brand small{font-family:var(--sans);font-size:10px;letter-spacing:.24em;color:var(--gold);margin-left:10px;border:1px solid rgba(184,149,90,.6);padding:3px 7px;vertical-align:3px}
 .tabsnav{min-width:0}
 .tabs{display:flex;gap:22px;margin:0;padding:0}
@@ -92,7 +93,8 @@ footer.foot .brand-logo{width:30px;height:30px}
 @media (max-width:1279px){
   /* barra de pestañas fija bajo la cabecera, con desplazamiento lateral */
   .nav .wrap{flex-wrap:wrap;height:auto}
-  .brand,.navr{min-height:64px;display:flex;align-items:center}
+  .brand,.navr{min-height:72px;display:flex;align-items:center}
+  .brand-logo{height:60px}
   .tabsnav{order:3;flex:0 0 calc(100% + 2*var(--gut));margin:0 calc(-1*var(--gut));background:rgba(10,26,40,.72);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-top:1px solid var(--rule-d)}
   .nav.solid .tabsnav{background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
   .tabs{gap:6px;overflow-x:auto;padding:8px var(--gut);scrollbar-width:none;-webkit-overflow-scrolling:touch;
@@ -102,7 +104,7 @@ footer.foot .brand-logo{width:30px;height:30px}
   .tab::after{display:none}
   .tab[aria-selected="true"]{background:var(--sand);color:var(--night);font-weight:600}
   .tab:focus-visible{outline-offset:2px;border-radius:999px}
-  .js .panel:not(#inicio)>section:first-child{border-top:72px solid transparent}
+  .js .panel:not(#inicio)>section:first-child{border-top:80px solid transparent}
 }
 
 /* hero */
@@ -393,7 +395,7 @@ footer.foot .brand{font-size:16px}
 @media (max-width:600px){
   body{font-size:16px}
   .brand{font-size:17px;letter-spacing:.16em;gap:9px}
-  .brand-logo{width:32px;height:32px}
+  .brand-logo{height:54px}
   .brand small{display:none}
   .hero h1{font-size:clamp(50px,15.5vw,80px)}
   .hero h1 .sep{display:block;height:0;overflow:hidden}
@@ -428,7 +430,7 @@ footer.foot .brand{font-size:16px}
 
 <header class="nav" role="banner">
   <div class="wrap">
-    <a class="brand" href="#inicio"><img class="brand-logo" src="img/logo-lb-96.png" srcset="img/logo-lb-96.png 1x, img/logo-lb-192.png 2x" width="38" height="38" alt="">Lago Bravo</a>
+    <a class="brand" href="#inicio" aria-label="Lago Bravo · World Resort"><img class="brand-logo" src="img/logo-lb-h120.png" srcset="img/logo-lb-h120.png 1x, img/logo-lb-h240.png 2x" width="193" height="88" alt="Lago Bravo · World Resort"></a>
     <nav class="tabsnav" aria-label="Principal"><div class="tabs" role="tablist" aria-label="Secciones" data-aria-es="Secciones" data-aria-en="Sections"><a class="tab" role="tab" id="t-inicio" href="#inicio" aria-controls="inicio" aria-selected="true" tabindex="0"><span class="l-es" lang="es">Inicio</span><span class="l-en" lang="en">Home</span></a><a class="tab" role="tab" id="t-lugar" href="#lugar" aria-controls="lugar" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">El lugar</span><span class="l-en" lang="en">The site</span></a><a class="tab" role="tab" id="t-resort" href="#resort" aria-controls="resort" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">El resort</span><span class="l-en" lang="en">The resort</span></a><a class="tab" role="tab" id="t-video" href="#video" aria-controls="video" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Vídeo</span><span class="l-en" lang="en">Film</span></a><a class="tab" role="tab" id="t-servicios" href="#servicios" aria-controls="servicios" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Servicios</span><span class="l-en" lang="en">Services</span></a><a class="tab" role="tab" id="t-propiedad" href="#propiedad" aria-controls="propiedad" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Propiedad</span><span class="l-en" lang="en">Ownership</span></a><a class="tab" role="tab" id="t-elsalvador" href="#elsalvador" aria-controls="elsalvador" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">El Salvador hoy</span><span class="l-en" lang="en">El Salvador today</span></a><a class="tab" role="tab" id="t-vision" href="#vision" aria-controls="vision" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Resort integrado</span><span class="l-en" lang="en">Integrated resort</span></a><a class="tab" role="tab" id="t-inversores" href="#inversores" aria-controls="inversores" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Inversores</span><span class="l-en" lang="en">Investors</span></a></div></nav>
     <div class="navr">
       <div class="lang" role="group" aria-label="Idioma / Language">
@@ -934,7 +936,7 @@ footer.foot .brand{font-size:16px}
     <div class="sec-head" style="margin-bottom:0">
       <div class="rv"><p class="eyebrow"><span class="l-es" lang="es">Inversores</span><span class="l-en" lang="en">Investors</span></p>
         <h2 class="h2"><span class="l-es" lang="es">Un destino, <em>proyectos separados</em></span><span class="l-en" lang="en">One destination, <em>separate projects</em></span></h2></div>
-      <p class="lead rv"><span class="l-es" lang="es">Lago Capital, S.A. de C.V. promueve el beach resort y será el gestor del activo: su retribución depende de que el resort funcione.</span><span class="l-en" lang="en">Lago Capital, S.A. de C.V. is developing the beach resort and will be its asset manager: its return depends on the resort performing.</span></p>
+      <p class="lead rv"><span class="l-es" lang="es">Lago Capital será el promotor del resort y gestor del activo.</span><span class="l-en" lang="en">Lago Capital will be the resort's developer and asset manager.</span></p>
     </div>
     <ol class="phases">
       <li class="rv"><span class="n">Lago Bravo beach resort</span><span class="status"><span class="l-es" lang="es">En diseño</span><span class="l-en" lang="en">In design</span></span>
@@ -947,8 +949,8 @@ footer.foot .brand{font-size:16px}
     <div class="contact rv">
       <div>
         <h3><span class="l-es" lang="es">Hablemos del proyecto</span><span class="l-en" lang="en">Let's talk about the project</span></h3>
-        <a class="mail" href="mailto:jme@lago.capital?subject=Lago%20Bravo%20%C2%B7%20Quebrada%20Escondida">jme@lago.capital</a>
-        <div class="btns"><a class="btn btn-gold" href="mailto:jme@lago.capital?subject=Lago%20Bravo%20%C2%B7%20Quebrada%20Escondida"><span class="l-es" lang="es">Solicitar información</span><span class="l-en" lang="en">Request information</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></div>
+        <a class="mail" href="mailto:info@lagobravo.com?subject=Lago%20Bravo%20%C2%B7%20Quebrada%20Escondida">info@lagobravo.com</a>
+        <div class="btns"><a class="btn btn-gold" href="mailto:info@lagobravo.com?subject=Lago%20Bravo%20%C2%B7%20Quebrada%20Escondida"><span class="l-es" lang="es">Solicitar información</span><span class="l-en" lang="en">Request information</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></div>
       </div>
       <p class="disc"><span class="l-es" lang="es">Información orientativa; no constituye oferta de valores. Imágenes y vídeo generados sobre la maqueta 3D del proyecto, no son fotografías; superficies, programa y fases sujetos a proyecto, licencias y normativa aplicable.</span><span class="l-en" lang="en">Indicative information; it does not constitute an offer of securities. Images and film generated on the project's 3D model, not photographs; areas, programme and phases subject to design, licences and applicable regulations.</span></p>
     </div>
@@ -958,7 +960,7 @@ footer.foot .brand{font-size:16px}
 </main>
 
 <footer class="foot"><div class="wrap">
-  <span><span class="brand" style="color:var(--sand)"><img class="brand-logo" src="img/logo-lb-96.png" width="30" height="30" alt="" loading="lazy">Lago Bravo</span> &nbsp;·&nbsp; Quebrada Escondida, La Libertad, El Salvador</span>
+  <span style="display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap"><span class="brand"><img class="brand-logo" src="img/logo-lb-h120.png" width="132" height="60" alt="Lago Bravo · World Resort" loading="lazy"></span><span>Quebrada Escondida, La Libertad, El Salvador</span></span>
   <span>© Lago Capital, S.A. de C.V. · 2026</span>
 </div></footer>
 <script>
