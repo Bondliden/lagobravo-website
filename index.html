@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-<script>(function(){var d=document.documentElement,h=location.hash.slice(1),T='inicio lugar resort video servicios propiedad elsalvador fase2 inversores'.split(' '),A={top:'inicio',pelicula:'video',vision:'fase2','resort-integrado':'fase2',farallones:'fase2'};try{h=decodeURIComponent(h);}catch(e){}h=A[h]||h;var t=T.indexOf(h)>=0?h:(/^f\d+$/.test(h)||h==='fuentes'?'elsalvador':'inicio');d.classList.add('js');d.setAttribute('data-tab',t);if(t==='inicio'){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='img/hero-1920.webp';l.setAttribute('imagesrcset','img/hero-960.webp 960w, img/hero-1920.webp 1920w');l.setAttribute('imagesizes','100vw');document.head.appendChild(l);}})();</script>
+<script>(function(){var d=document.documentElement,h=location.hash.slice(1),T='inicio lugar resort video servicios propiedad elsalvador farallones inversores'.split(' '),A={top:'inicio',pelicula:'video',vision:'farallones','resort-integrado':'farallones',fase2:'farallones'};try{h=decodeURIComponent(h);}catch(e){}h=A[h]||h;var t=T.indexOf(h)>=0?h:(/^f\d+$/.test(h)||h==='fuentes'?'elsalvador':'inicio');d.classList.add('js');d.setAttribute('data-tab',t);if(t==='inicio'){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='img/hero-1920.webp';l.setAttribute('imagesrcset','img/hero-960.webp 960w, img/hero-1920.webp 1920w');l.setAttribute('imagesizes','100vw');document.head.appendChild(l);}})();</script>
 <style>
 :root{
   --night:#0E2233; --night-2:#0A1A28; --night-3:#14304A;
@@ -84,7 +84,7 @@ footer.foot .brand-logo{height:60px}
 /* pestañas: solo se ve el panel activo. El script de la cabecera pone html.js y data-tab antes de pintar,
    asi que un enlace directo (lagobravo.com/#inversores) abre ya en su pestaña, sin parpadeo */
 .js .panel{display:none}
-.js[data-tab="inicio"] #inicio,.js[data-tab="lugar"] #lugar,.js[data-tab="resort"] #resort,.js[data-tab="video"] #video,.js[data-tab="servicios"] #servicios,.js[data-tab="propiedad"] #propiedad,.js[data-tab="elsalvador"] #elsalvador,.js[data-tab="fase2"] #fase2,.js[data-tab="inversores"] #inversores{display:block}
+.js[data-tab="inicio"] #inicio,.js[data-tab="lugar"] #lugar,.js[data-tab="resort"] #resort,.js[data-tab="video"] #video,.js[data-tab="servicios"] #servicios,.js[data-tab="propiedad"] #propiedad,.js[data-tab="elsalvador"] #elsalvador,.js[data-tab="farallones"] #farallones,.js[data-tab="inversores"] #inversores{display:block}
 .panel[hidden]{display:none!important}
 .panel:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
 #fuentes li{scroll-margin-top:150px}
@@ -240,7 +240,7 @@ footer.foot .brand-logo{height:60px}
 .strip i.prime{background:var(--night);box-shadow:inset 0 -6px 0 var(--gold)}
 .legend{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:16px;font-size:14px;color:#3E4B57}
 .legend span{display:inline-flex;align-items:center;gap:8px}
-.legend i{width:16px;height:16px;display:inline-block;border-radius:1px}
+.legend i{width:16px;height:16px;display:inline-block;border-radius:1px;flex:none}
 .fine{font-size:13px;color:#4A5763;margin:18px 0 0}
 
 /* el salvador hoy */
@@ -311,7 +311,7 @@ details.sources ol{margin-top:8px}
 
 /* texto justificado */
 .lead,.row p,.card p,.piece p,.ctx p,.svc-list p,.own-grid p,.legal p,.legal li,.plan-note,.disc,.fine,.intro,.lugar p,.inv .phases p,.src,.note,.app .cap,.caveat,.piece li{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
-/* fase 2 · Los Farallones */
+/* Los Farallones, el siguiente proyecto */
 .f2{background:var(--sand-2)}
 .f2-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,4vw,64px);align-items:start;margin-top:clamp(40px,5vw,64px)}
 .pieces{position:sticky;top:96px}
@@ -431,7 +431,7 @@ footer.foot .brand{font-size:16px}
 <header class="nav" role="banner">
   <div class="wrap">
     <a class="brand" href="#inicio" aria-label="Lago Bravo · World Resort"><img class="brand-logo" src="img/logo-lb-h120.png" srcset="img/logo-lb-h120.png 1x, img/logo-lb-h240.png 2x" width="193" height="88" alt="Lago Bravo · World Resort"></a>
-    <nav class="tabsnav" aria-label="Principal"><div class="tabs" role="tablist" aria-label="Secciones" data-aria-es="Secciones" data-aria-en="Sections"><a class="tab" role="tab" id="t-inicio" href="#inicio" aria-controls="inicio" aria-selected="true" tabindex="0"><span class="l-es" lang="es">Inicio</span><span class="l-en" lang="en">Home</span></a><a class="tab" role="tab" id="t-lugar" href="#lugar" aria-controls="lugar" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">El lugar</span><span class="l-en" lang="en">The site</span></a><a class="tab" role="tab" id="t-resort" href="#resort" aria-controls="resort" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">El resort</span><span class="l-en" lang="en">The resort</span></a><a class="tab" role="tab" id="t-video" href="#video" aria-controls="video" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Vídeo</span><span class="l-en" lang="en">Film</span></a><a class="tab" role="tab" id="t-servicios" href="#servicios" aria-controls="servicios" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Servicios</span><span class="l-en" lang="en">Services</span></a><a class="tab" role="tab" id="t-propiedad" href="#propiedad" aria-controls="propiedad" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Propiedad</span><span class="l-en" lang="en">Ownership</span></a><a class="tab" role="tab" id="t-elsalvador" href="#elsalvador" aria-controls="elsalvador" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">El Salvador hoy</span><span class="l-en" lang="en">El Salvador today</span></a><a class="tab" role="tab" id="t-fase2" href="#fase2" aria-controls="fase2" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Los Farallones</span><span class="l-en" lang="en">Los Farallones</span></a><a class="tab" role="tab" id="t-inversores" href="#inversores" aria-controls="inversores" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Inversores</span><span class="l-en" lang="en">Investors</span></a></div></nav>
+    <nav class="tabsnav" aria-label="Principal"><div class="tabs" role="tablist" aria-label="Secciones" data-aria-es="Secciones" data-aria-en="Sections"><a class="tab" role="tab" id="t-inicio" href="#inicio" aria-controls="inicio" aria-selected="true" tabindex="0"><span class="l-es" lang="es">Inicio</span><span class="l-en" lang="en">Home</span></a><a class="tab" role="tab" id="t-lugar" href="#lugar" aria-controls="lugar" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">El lugar</span><span class="l-en" lang="en">The site</span></a><a class="tab" role="tab" id="t-resort" href="#resort" aria-controls="resort" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">El resort</span><span class="l-en" lang="en">The resort</span></a><a class="tab" role="tab" id="t-video" href="#video" aria-controls="video" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Vídeo</span><span class="l-en" lang="en">Film</span></a><a class="tab" role="tab" id="t-servicios" href="#servicios" aria-controls="servicios" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Servicios</span><span class="l-en" lang="en">Services</span></a><a class="tab" role="tab" id="t-propiedad" href="#propiedad" aria-controls="propiedad" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Propiedad</span><span class="l-en" lang="en">Ownership</span></a><a class="tab" role="tab" id="t-elsalvador" href="#elsalvador" aria-controls="elsalvador" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">El Salvador hoy</span><span class="l-en" lang="en">El Salvador today</span></a><a class="tab" role="tab" id="t-farallones" href="#farallones" aria-controls="farallones" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Los Farallones</span><span class="l-en" lang="en">Los Farallones</span></a><a class="tab" role="tab" id="t-inversores" href="#inversores" aria-controls="inversores" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Inversores</span><span class="l-en" lang="en">Investors</span></a></div></nav>
     <div class="navr">
       <div class="lang" role="group" aria-label="Idioma / Language">
         <button type="button" data-set="es" aria-pressed="true" lang="es">ES</button>
@@ -465,7 +465,7 @@ footer.foot .brand{font-size:16px}
       <div class="fact"><span class="v"><span class="l-es" lang="es">413.170</span><span class="l-en" lang="en">413,170</span><small>m²</small></span><span class="k"><span class="l-es" lang="es">superficie titulada (Centro Nacional de Registros)</span><span class="l-en" lang="en">titled area (National Registry Centre)</span></span></div>
       <div class="fact"><span class="v">340</span><span class="k"><span class="l-es" lang="es">unidades escrituradas</span><span class="l-en" lang="en">deeded units</span></span></div>
       <div class="fact"><span class="v">282</span><span class="k"><span class="l-es" lang="es">apartamentos en dos torres, que se venden enteros</span><span class="l-en" lang="en">apartments in two towers, sold whole</span></span></div>
-      <div class="fact"><span class="v">58</span><span class="k"><span class="l-es" lang="es">villas bajo palapa, en fracciones de 1/6</span><span class="l-en" lang="en">palapa villas, sold in 1/6 fractions</span></span></div>
+      <div class="fact"><span class="v">58</span><span class="k"><span class="l-es" lang="es">villas bajo palapa, en fracciones de&nbsp;1/12</span><span class="l-en" lang="en">palapa villas, sold in 1/12&nbsp;fractions</span></span></div>
     </div>
   </div>
 </section>
@@ -521,7 +521,7 @@ footer.foot .brand{font-size:16px}
         <div class="units">
           <div><b>340</b><span class="l-es" lang="es">unidades escrituradas</span><span class="l-en" lang="en">deeded units</span></div>
           <div><b>282</b><span class="l-es" lang="es">apartamentos en dos torres, que se venden enteros</span><span class="l-en" lang="en">apartments in two towers, sold whole</span></div>
-          <div><b>58</b><span class="l-es" lang="es">villas bajo palapa, en fracciones de 1/6</span><span class="l-en" lang="en">palapa villas, sold in 1/6 fractions</span></div>
+          <div><b>58</b><span class="l-es" lang="es">villas bajo palapa, en fracciones de&nbsp;1/12</span><span class="l-en" lang="en">palapa villas, sold in 1/12&nbsp;fractions</span></div>
         </div>
       </div>
       <p class="lead rv"><span class="l-es" lang="es">Dos torres paralelas de apartamentos, cada una bajo una sola palapa larga; a sus pies, el restaurante en una isla dentro de una piscina circular; 58 villas bajo palapa entre la selva del valle; y a pie de playa, el beach club doble, el bar redondo en la roca, la coctelería sobre la laguna y la piscina principal.</span><span class="l-en" lang="en">Two parallel apartment towers, each under one long palapa roof; at their feet, the restaurant on an island inside a circular pool; 58 palapa villas among the valley's forest; and at the water's edge, the double beach club, the round bar in the rock, the cocktail bar over the lagoon and the main pool.</span></p>
@@ -642,15 +642,16 @@ footer.foot .brand{font-size:16px}
 
       <div class="row flip rv">
         <div class="media duo">
-          <figure class="ph "><img src="img/piscina-1920.webp" srcset="img/piscina-960.webp 960w, img/piscina-1920.webp 1920w" sizes="(max-width:980px) 100vw, 36vw" width="1920" height="1080" loading="lazy" decoding="async" alt="La piscina principal con su isla-escenario y, detrás, las villas bajo palapa y las dos torres" data-alt-es="La piscina principal con su isla-escenario y, detrás, las villas bajo palapa y las dos torres" data-alt-en="The main pool with its island stage and, behind it, the palapa villas and the two towers"><figcaption class="prov"><span class="l-es" lang="es">Maqueta 3D · diseño en desarrollo</span><span class="l-en" lang="en">3D model · design in progress</span></figcaption></figure>
+          <figure class="ph "><img src="img/piscina-1920.webp" srcset="img/piscina-960.webp 960w, img/piscina-1920.webp 1920w" sizes="(max-width:980px) 100vw, 36vw" width="1920" height="1080" loading="lazy" decoding="async" alt="La piscina principal junto al malecón y, detrás, las villas bajo palapa y las dos torres" data-alt-es="La piscina principal junto al malecón y, detrás, las villas bajo palapa y las dos torres" data-alt-en="The main pool by the promenade and, behind it, the palapa villas and the two towers"><figcaption class="prov"><span class="l-es" lang="es">Maqueta 3D · diseño en desarrollo</span><span class="l-en" lang="en">3D model · design in progress</span></figcaption></figure>
           <figure class="ph "><img src="img/frente-playa-1920.webp" srcset="img/frente-playa-960.webp 960w, img/frente-playa-1920.webp 1920w" sizes="(max-width:980px) 100vw, 24vw" width="1920" height="1080" loading="lazy" decoding="async" style="object-position:32% 50%" alt="El frente de playa desde el mar al atardecer: el beach club, la piscina y el bar redondo, con las dos torres al fondo" data-alt-es="El frente de playa desde el mar al atardecer: el beach club, la piscina y el bar redondo, con las dos torres al fondo" data-alt-en="The beachfront from the sea at sunset: the beach club, the pool and the round bar, with the two towers behind"><figcaption class="prov"><span class="l-es" lang="es">Maqueta 3D · diseño en desarrollo</span><span class="l-en" lang="en">3D model · design in progress</span></figcaption></figure>
         </div>
         <div>
           <span class="tag"><span class="l-es" lang="es">Frente de playa</span><span class="l-en" lang="en">Beachfront</span></span>
           <h3><span class="l-es" lang="es">Piscinas y malecón</span><span class="l-en" lang="en">Pools and promenade</span></h3>
-          <p><span class="l-es" lang="es">Un malecón recto frente a la playa, con la piscina principal y su isla-escenario para música en directo, una piscina infantil redonda y tumbonas en el solárium y en la arena.</span><span class="l-en" lang="en">A straight promenade along the beach, with the main pool and its island stage for live music, a round children's pool, and loungers on the sun deck and on the sand.</span></p>
+          <p><span class="l-es" lang="es">Un malecón recto frente a la playa y, paralela a él, la piscina principal: rectangular, de 61&nbsp;×&nbsp;16&nbsp;m, con borde infinito hacia el mar y una isla-escenario para música en directo. Además, una piscina infantil redonda y tumbonas en el solárium y en la arena.</span><span class="l-en" lang="en">A straight promenade along the beach and, parallel to it, the main pool: rectangular, 61&nbsp;×&nbsp;16&nbsp;m, with an infinity edge facing the sea and an island stage for live music. Plus a round children's pool, and loungers on the sun deck and on the sand.</span></p>
           <ul class="specs">
-            <li><span><span class="l-es" lang="es">Piscina principal</span><span class="l-en" lang="en">Main pool</span></span><span>61&nbsp;×&nbsp;16&nbsp;m</span></li>
+            <li><span><span class="l-es" lang="es">Piscina principal</span><span class="l-en" lang="en">Main pool</span></span><span><span class="l-es" lang="es">61&nbsp;×&nbsp;16&nbsp;m, rectangular</span><span class="l-en" lang="en">61&nbsp;×&nbsp;16&nbsp;m, rectangular</span></span></li>
+            <li><span><span class="l-es" lang="es">Borde infinito</span><span class="l-en" lang="en">Infinity edge</span></span><span><span class="l-es" lang="es">paralelo al malecón, hacia el mar</span><span class="l-en" lang="en">parallel to the promenade, facing the sea</span></span></li>
             <li><span><span class="l-es" lang="es">Isla-escenario</span><span class="l-en" lang="en">Island stage</span></span><span><span class="l-es" lang="es">música en directo</span><span class="l-en" lang="en">live music</span></span></li>
             <li><span><span class="l-es" lang="es">Piscina infantil</span><span class="l-en" lang="en">Children's pool</span></span><span><span class="l-es" lang="es">redonda</span><span class="l-en" lang="en">round</span></span></li>
           </ul>
@@ -721,27 +722,28 @@ footer.foot .brand{font-size:16px}
 </div>
 
 <div class="panel" role="tabpanel" id="propiedad" aria-labelledby="t-propiedad" tabindex="0">
-<!-- 5 PROPIEDAD: apartamentos enteros y villas en fracciones de 1/6 -->
+<!-- 5 PROPIEDAD: apartamentos enteros y villas en fracciones de 1/12 -->
 <section class="sec own">
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:0">
       <div class="rv"><p class="eyebrow"><span class="l-es" lang="es">Propiedad</span><span class="l-en" lang="en">Ownership</span></p>
-        <h2 class="h2"><span class="l-es" lang="es">Un apartamento entero <em>o una sexta parte de villa</em></span><span class="l-en" lang="en">A whole apartment <em>or a sixth of a villa</em></span></h2></div>
-      <p class="lead rv"><span class="l-es" lang="es">340 unidades: 282 apartamentos con escritura y 58 villas en fracciones de 1/6 escrituradas. El apartamento se compra entero; la villa, por sextas partes, con reglamento de copropiedad propio: cada fracción se escritura, se usa, se cede al pool o se intercambia.</span><span class="l-en" lang="en">340 units: 282 deeded apartments and 58 villas in deeded 1/6 fractions. An apartment is bought whole; a villa, in sixths, with its own co-ownership rules: each fraction is deeded, used, released to the pool or exchanged.</span></p>
+        <h2 class="h2"><span class="l-es" lang="es">Un apartamento entero <em>o la doceava parte de una villa</em></span><span class="l-en" lang="en">A whole apartment <em>or a twelfth of a villa</em></span></h2></div>
+      <p class="lead rv"><span class="l-es" lang="es">340 unidades: 282 apartamentos con escritura y 58 villas en fracciones de 1/12 escrituradas. El apartamento se compra entero; la villa, por doceavas partes, con reglamento de copropiedad propio: cada fracción se escritura, se usa, se cede al pool o se intercambia.</span><span class="l-en" lang="en">340 units: 282 deeded apartments and 58 villas in deeded 1/12 fractions. An apartment is bought whole; a villa, in twelfths, with its own co-ownership rules: each fraction is deeded, used, released to the pool or exchanged.</span></p>
     </div>
     <div class="own-grid">
-      <article class="rv"><span class="big">8</span><h3><span class="l-es" lang="es">semanas al año</span><span class="l-en" lang="en">weeks a year</span></h3>
-        <p><span class="l-es" lang="es">Cada fracción de villa da 8 semanas al año. De las 52 semanas de cada villa, 48 son de sus seis propietarios y 4 se reservan al mantenimiento, en temporada baja.</span><span class="l-en" lang="en">Each villa fraction gives 8 weeks a year. Of each villa's 52 weeks, 48 belong to its six owners and 4 are kept for maintenance, in the low season.</span></p></article>
-      <article class="rv"><span class="big">6</span><h3><span class="l-es" lang="es">propietarios por villa</span><span class="l-en" lang="en">owners per villa</span></h3>
-        <p><span class="l-es" lang="es">Un calendario reparte las semanas entre los propietarios, con turnos en temporada alta —de mediados de diciembre a abril y las vacaciones de agosto—, según el reglamento de copropiedad.</span><span class="l-en" lang="en">A calendar shares out the weeks among the owners, with turns in the high season —mid-December to April and the August holidays— under the co-ownership rules.</span></p></article>
+      <article class="rv"><span class="big">4</span><h3><span class="l-es" lang="es">semanas al año</span><span class="l-en" lang="en">weeks a year</span></h3>
+        <p><span class="l-es" lang="es">Cada fracción de villa da 4 semanas al año. De las 52 semanas de cada villa, 48 son de sus doce fracciones (12&nbsp;×&nbsp;4) y 4 se reservan al mantenimiento, en temporada baja.</span><span class="l-en" lang="en">Each villa fraction gives 4 weeks a year. Of each villa's 52 weeks, 48 belong to its twelve fractions (12&nbsp;×&nbsp;4) and 4 are kept for maintenance, in the low season.</span></p></article>
+      <article class="rv"><span class="big">11&nbsp;+&nbsp;1</span><h3><span class="l-es" lang="es">fracciones por villa</span><span class="l-en" lang="en">fractions per villa</span></h3>
+        <p><span class="l-es" lang="es">Once se venden, 638 en total, y la duodécima se la queda Lago Bravo para el pool de alquiler. Un calendario reparte las semanas, con turnos en temporada alta —&#8288;de mediados de diciembre a abril y las vacaciones de agosto&#8288;—, según el reglamento de copropiedad.</span><span class="l-en" lang="en">Eleven are for sale, 638 in all, and Lago Bravo keeps the twelfth for the rental pool. A calendar shares out the weeks, with turns in the high season —&#8288;mid-December to April and the August holidays&#8288;— under the co-ownership rules.</span></p></article>
       <article class="rv"><span class="big">RCI</span><h3><span class="l-es" lang="es">intercambio</span><span class="l-en" lang="en">exchange</span></h3>
-        <p><span class="l-es" lang="es">Afiliación prevista a RCI, la mayor red de intercambio de propiedad vacacional: el propietario puede canjear sus semanas por otros destinos, y Lago Bravo le paga los dos primeros años. Si no las usa, puede cederlas al pool hotelero gestionado.</span><span class="l-en" lang="en">Planned affiliation with RCI, the largest vacation-ownership exchange network: owners can swap their weeks for other destinations, and Lago Bravo pays their first two years. Weeks not used can be released to the managed hotel pool.</span></p></article>
+        <p><span class="l-es" lang="es">Afiliación prevista a RCI, la mayor red de intercambio de propiedad vacacional: el propietario puede canjear sus semanas por otros destinos, y Lago Bravo le paga los dos primeros años. Si no las usa, puede cederlas al pool de alquiler que gestiona el resort.</span><span class="l-en" lang="en">Planned affiliation with RCI, the largest vacation-ownership exchange network: owners can swap their weeks for other destinations, and Lago Bravo pays their first two years. Weeks not used can be released to the rental pool run by the resort.</span></p></article>
     </div>
     <div class="weeks rv">
       <h3><span class="l-es" lang="es">Un año de una villa, semana a semana (ilustrativo)</span><span class="l-en" lang="en">One villa's year, week by week (illustrative)</span></h3>
-      <div class="strip" role="img" aria-label="48 semanas de propietarios y 4 de mantenimiento" data-aria-es="48 semanas de propietarios y 4 de mantenimiento" data-aria-en="48 owner weeks and 4 maintenance weeks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="mt"></i><i class="mt"></i><i class="mt"></i><i class="mt"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="strip" role="img" aria-label="44 semanas de las 11 fracciones a la venta, 4 de la fracción de Lago Bravo para el pool de alquiler y 4 de mantenimiento" data-aria-es="44 semanas de las 11 fracciones a la venta, 4 de la fracción de Lago Bravo para el pool de alquiler y 4 de mantenimiento" data-aria-en="44 weeks for the 11 fractions for sale, 4 for Lago Bravo's fraction in the rental pool and 4 maintenance weeks"><i></i><i></i><i></i><i></i><i></i><i></i><i class="pool"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="pool"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="pool"></i><i></i><i></i><i></i><i class="mt"></i><i class="mt"></i><i class="mt"></i><i class="mt"></i><i></i><i></i><i></i><i></i><i></i><i class="pool"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div class="legend">
-        <span><i style="background:var(--night)"></i><span class="l-es" lang="es">48 semanas · 6 propietarios ×&nbsp;8</span><span class="l-en" lang="en">48 weeks · 6 owners ×&nbsp;8</span></span>
+        <span><i style="background:var(--night)"></i><span class="l-es" lang="es">44 semanas · 11 fracciones a la venta ×&nbsp;4</span><span class="l-en" lang="en">44 weeks · 11 fractions for sale ×&nbsp;4</span></span>
+        <span><i style="background:var(--gold)"></i><span class="l-es" lang="es">4 semanas · la fracción de Lago Bravo, para el pool de alquiler</span><span class="l-en" lang="en">4 weeks · Lago Bravo's fraction, for the rental pool</span></span>
         <span><i style="border:1px solid var(--night)"></i><span class="l-es" lang="es">4 semanas · mantenimiento</span><span class="l-en" lang="en">4 weeks · maintenance</span></span>
       </div>
       <p class="fine"><span class="l-es" lang="es">La renta del pool es una posibilidad, no una rentabilidad garantizada. Condiciones de RCI pendientes de confirmación por escrito.</span><span class="l-en" lang="en">Pool income is a possibility, not a guaranteed return. RCI terms pending written confirmation.</span></p>
@@ -770,8 +772,8 @@ footer.foot .brand{font-size:16px}
 </section>
 </div>
 
-<div class="panel" role="tabpanel" id="fase2" aria-labelledby="t-fase2" tabindex="0">
-<!-- 7 FASE 2 · LOS FARALLONES: golf, Crystal Lagoon y hotel, al otro lado de la Carretera del Litoral -->
+<div class="panel" role="tabpanel" id="farallones" aria-labelledby="t-farallones" tabindex="0">
+<!-- 7 LOS FARALLONES, EL SIGUIENTE PROYECTO: golf, Crystal Lagoon y hotel, al otro lado de la Carretera del Litoral -->
 <section class="sec f2">
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:0">
@@ -895,13 +897,13 @@ footer.foot .brand{font-size:16px}
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:0">
       <div class="rv"><p class="eyebrow"><span class="l-es" lang="es">Inversores</span><span class="l-en" lang="en">Investors</span></p>
-        <h2 class="h2"><span class="l-es" lang="es">Un destino, <em>dos fases</em></span><span class="l-en" lang="en">One destination, <em>two phases</em></span></h2></div>
+        <h2 class="h2"><span class="l-es" lang="es">Un destino, <em>dos proyectos</em></span><span class="l-en" lang="en">One destination, <em>two projects</em></span></h2></div>
       <p class="lead rv"><span class="l-es" lang="es">Lago Capital será el promotor del resort y gestor del activo.</span><span class="l-en" lang="en">Lago Capital will be the resort's developer and asset manager.</span></p>
     </div>
     <ol class="phases">
       <li class="rv"><span class="n">Lago Bravo beach resort</span><span class="status"><span class="l-es" lang="es">En diseño</span><span class="l-en" lang="en">In design</span></span>
         <h3><span class="l-es" lang="es">El resort de playa</span><span class="l-en" lang="en">The beach resort</span></h3>
-        <p><span class="l-es" lang="es">340 unidades: 282 apartamentos con escritura y 58 villas en fracciones de 1/6 escrituradas. Restaurante en isla con spa, beach club, planta y salón de eventos, piscinas y servicios con app propia. Intercambio RCI previsto.</span><span class="l-en" lang="en">340 units: 282 deeded apartments and 58 villas in deeded 1/6 fractions. An island restaurant with a spa, beach club, events floor and events hall, pools and app-based services. RCI exchange planned.</span></p></li>
+        <p><span class="l-es" lang="es">340 unidades: 282 apartamentos con escritura y 58 villas en fracciones de 1/12 escrituradas; Lago Bravo se queda una fracción de cada villa para el pool de alquiler. Restaurante en isla con spa, beach club, planta y salón de eventos, piscinas y servicios con app propia. Intercambio RCI previsto.</span><span class="l-en" lang="en">340 units: 282 deeded apartments and 58 villas in deeded 1/12 fractions; Lago Bravo keeps one fraction of each villa for the rental pool. An island restaurant with a spa, beach club, events floor and events hall, pools and app-based services. RCI exchange planned.</span></p></li>
       <li class="rv"><span class="n"><span class="l-es" lang="es">Siguiente proyecto · Los Farallones</span><span class="l-en" lang="en">Next project · Los Farallones</span></span><span class="status"><span class="l-es" lang="es">Visión · sujeta a licencias</span><span class="l-en" lang="en">Vision · subject to licences</span></span>
         <h3><span class="l-es" lang="es">Golf, Crystal Lagoon y hotel</span><span class="l-en" lang="en">Golf, Crystal Lagoon and hotel</span></h3>
         <p><span class="l-es" lang="es">Al otro lado de la Carretera del Litoral <span style='white-space:nowrap'>(CA-2)</span>, en la parcela de Los Farallones: un campo de golf, una laguna de agua cristalina del tipo Crystal Lagoons y un hotel de unas 120 suites con ocio.</span><span class="l-en" lang="en">Across the Coastal Highway <span style='white-space:nowrap'>(CA-2)</span>, on the Los Farallones plot: a golf course, a crystal-clear lagoon of the Crystal Lagoons type and a hotel of about 120 suites with leisure facilities.</span></p></li>
@@ -930,8 +932,8 @@ footer.foot .brand{font-size:16px}
   if(qs.has('noanim')) d.classList.add('noanim');
   var TITLES={es:'Lago Bravo · Quebrada Escondida — El Salvador, costa del Pacífico',
               en:'Lago Bravo · Quebrada Escondida — El Salvador, Pacific Coast'};
-  var DESC={es:'Lago Bravo, primer destino: Quebrada Escondida, un valle abierto al Pacífico en La Libertad, El Salvador. Apartamentos con escritura y villas en fracciones de 1/6; al otro lado de la carretera, el siguiente proyecto en Los Farallones.',
-            en:'Lago Bravo, first destination: Quebrada Escondida, a valley opening onto the Pacific in La Libertad, El Salvador. Deeded apartments and villas in 1/6 fractions; across the road, the next project at Los Farallones.'};
+  var DESC={es:'Lago Bravo, primer destino: Quebrada Escondida, un valle abierto al Pacífico en La Libertad, El Salvador. Apartamentos con escritura y villas en fracciones de 1/12; al otro lado de la carretera, el siguiente proyecto en Los Farallones.',
+            en:'Lago Bravo, first destination: Quebrada Escondida, a valley opening onto the Pacific in La Libertad, El Salvador. Deeded apartments and villas in 1/12 fractions; across the road, the next project at Los Farallones.'};
   function setLang(l){
     if(l!=='es'&&l!=='en') l='es';
     d.setAttribute('data-lang',l); d.lang=l;
@@ -950,8 +952,8 @@ footer.foot .brand{font-size:16px}
 
   // ---- pestañas: Inicio, El lugar, El resort, Vídeo, Servicios, Propiedad, El Salvador hoy, Los Farallones, Inversores
   var nav=document.querySelector('.nav'), bar=document.querySelector('.tabs');
-  var TABS=['inicio','lugar','resort','video','servicios','propiedad','elsalvador','fase2','inversores'];
-  var ALIAS={top:'inicio',pelicula:'video',vision:'fase2','resort-integrado':'fase2',farallones:'fase2'};   // anclas antiguas (v4 y v4.1-v4.3)
+  var TABS=['inicio','lugar','resort','video','servicios','propiedad','elsalvador','farallones','inversores'];
+  var ALIAS={top:'inicio',pelicula:'video',vision:'farallones','resort-integrado':'farallones',fase2:'farallones'};   // anclas antiguas (v4, v4.1-v4.3 y v4.4)
   var tabEls=[].slice.call(document.querySelectorAll('[role="tab"]'));
   var cur=d.getAttribute('data-tab')||'inicio';
   try{history.scrollRestoration='manual';}catch(e){}
@@ -983,7 +985,7 @@ footer.foot .brand{font-size:16px}
   function media(t){
     if(hv){ if(t==='inicio'){attach(hv,'auto'); if(heroIn) play();} else hv.pause(); }
     if(fv){ if(t==='video') attach(fv); else if(!fv.paused) fv.pause(); }
-    if(t==='fase2'){var im=document.querySelector('svg image[data-href]'); if(im){im.setAttribute('href',im.getAttribute('data-href'));im.removeAttribute('data-href');}}
+    if(t==='farallones'){var im=document.querySelector('svg image[data-href]'); if(im){im.setAttribute('href',im.getAttribute('data-href'));im.removeAttribute('data-href');}}
   }
   if(hv){
     hv.addEventListener('canplay',function(){hv.classList.add('on'); if(cur==='inicio'&&heroIn) play();});
