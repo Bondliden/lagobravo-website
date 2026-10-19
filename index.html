@@ -77,6 +77,11 @@ footer.foot .brand-logo{height:60px}
 .tab:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:2px}
 @media (min-width:1280px) and (max-width:1365px){.tabs{gap:16px}}   /* v4.4: la pestaña de Los Farallones era más larga; a 1280 px deja el margen de la v4.3 */
 .navr{display:flex;align-items:center;gap:14px}
+.private-access{display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:0 11px;border:1px solid rgba(233,223,204,.45);border-radius:999px;color:#E9DFCC;font-size:12px;font-weight:600;letter-spacing:.06em;text-decoration:none;white-space:nowrap;transition:background .2s,border-color .2s,color .2s}
+.private-access:hover{background:rgba(233,223,204,.12);border-color:var(--gold);color:#FAF7F1}
+.private-access:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.private-access svg{width:13px;height:13px;flex:none}
+@media (max-width:1365px){.private-access span{display:none}.private-access{padding:0 10px}}
 .lang{display:flex;border:1px solid rgba(233,223,204,.45);border-radius:999px;padding:3px}
 .lang button{all:unset;cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.12em;color:#E9DFCC;min-width:40px;min-height:34px;display:grid;place-items:center;border-radius:999px;transition:background .2s,color .2s}
 .lang button[aria-pressed="true"]{background:var(--sand);color:var(--night)}
@@ -368,6 +373,8 @@ details.sources ol{margin-top:8px}
 footer.foot{background:var(--night-2);color:var(--muted-d);font-size:13px;padding:34px 0}
 footer.foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer.foot .brand{font-size:16px}
+.foot-private{color:var(--gold);text-decoration:none;white-space:nowrap}
+.foot-private:hover{text-decoration:underline}
 
 /* reveal */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
@@ -433,6 +440,7 @@ footer.foot .brand{font-size:16px}
     <a class="brand" href="#inicio" aria-label="Lago Bravo · World Resort"><img class="brand-logo" src="img/logo-lb-h120.png" srcset="img/logo-lb-h120.png 1x, img/logo-lb-h240.png 2x" width="193" height="88" alt="Lago Bravo · World Resort"></a>
     <nav class="tabsnav" aria-label="Principal"><div class="tabs" role="tablist" aria-label="Secciones" data-aria-es="Secciones" data-aria-en="Sections"><a class="tab" role="tab" id="t-inicio" href="#inicio" aria-controls="inicio" aria-selected="true" tabindex="0"><span class="l-es" lang="es">Inicio</span><span class="l-en" lang="en">Home</span></a><a class="tab" role="tab" id="t-lugar" href="#lugar" aria-controls="lugar" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">El lugar</span><span class="l-en" lang="en">The site</span></a><a class="tab" role="tab" id="t-resort" href="#resort" aria-controls="resort" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">El resort</span><span class="l-en" lang="en">The resort</span></a><a class="tab" role="tab" id="t-video" href="#video" aria-controls="video" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Vídeo</span><span class="l-en" lang="en">Film</span></a><a class="tab" role="tab" id="t-servicios" href="#servicios" aria-controls="servicios" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Servicios</span><span class="l-en" lang="en">Services</span></a><a class="tab" role="tab" id="t-propiedad" href="#propiedad" aria-controls="propiedad" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Propiedad</span><span class="l-en" lang="en">Ownership</span></a><a class="tab" role="tab" id="t-elsalvador" href="#elsalvador" aria-controls="elsalvador" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">El Salvador hoy</span><span class="l-en" lang="en">El Salvador today</span></a><a class="tab" role="tab" id="t-farallones" href="#farallones" aria-controls="farallones" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Los Farallones</span><span class="l-en" lang="en">Los Farallones</span></a><a class="tab" role="tab" id="t-inversores" href="#inversores" aria-controls="inversores" aria-selected="false" tabindex="-1"><span class="l-es" lang="es">Inversores</span><span class="l-en" lang="en">Investors</span></a></div></nav>
     <div class="navr">
+      <a class="private-access" href="https://portal.lagobravo.com" target="_blank" rel="noopener" aria-label="Área privada / Private area" title="Área privada / Private area"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.2" y="7" width="9.6" height="7" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M5.4 7V5.2a2.6 2.6 0 0 1 5.2 0V7" fill="none" stroke="currentColor" stroke-width="1.4"/></svg><span class="l-es" lang="es">Área privada</span><span class="l-en" lang="en">Private area</span></a>
       <div class="lang" role="group" aria-label="Idioma / Language">
         <button type="button" data-set="es" aria-pressed="true" lang="es">ES</button>
         <button type="button" data-set="en" aria-pressed="false" lang="en">EN</button>
@@ -921,7 +929,7 @@ footer.foot .brand{font-size:16px}
 </main>
 
 <footer class="foot"><div class="wrap">
-  <span style="display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap"><span class="brand"><img class="brand-logo" src="img/logo-lb-h120.png" width="132" height="60" alt="Lago Bravo · World Resort" loading="lazy"></span><span>Quebrada Escondida, La Libertad, El Salvador</span></span>
+  <span style="display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap"><span class="brand"><img class="brand-logo" src="img/logo-lb-h120.png" width="132" height="60" alt="Lago Bravo · World Resort" loading="lazy"></span><span>Quebrada Escondida, La Libertad, El Salvador · <a class="foot-private" href="https://portal.lagobravo.com" target="_blank" rel="noopener">Acceso privado</a></span></span>
   <span>© Lago Capital, S.A. de C.V. · 2026</span>
 </div></footer>
 <script>
